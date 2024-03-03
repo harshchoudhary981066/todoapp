@@ -19,7 +19,7 @@ export default function App() {
     setTodos((prev) => prev.filter((todo) => todo.id !== id))
   }
 
-  const toggleComplete = (id) => {
+  
     const toggleComplete = (id) => {
       //console.log(id);
       setTodos((prev) => 
@@ -27,7 +27,7 @@ export default function App() {
         prevTodo.id === id ? { ...prevTodo, 
           completed: !prevTodo.completed } : prevTodo))
     }
-  }
+  
 
   useEffect(() => {
     const todos = JSON.parse(localStorage.getItem("todos"))
